@@ -11,4 +11,5 @@ EditorBuildSettings:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 289c1b55c9541489481df5cc06664110, type: 3}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 80ae0d0eab10de54f998b2b4b88eeb59, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: bed3b56d6270eb5499e844d552a29e87, type: 2}
+    io.coherence.simulator.build.options: {fileID: 11400000, guid: ed5bc71b056fde442bb109bb88e5d354, type: 2}
   m_UseUCBPForAssetBundles: 0
