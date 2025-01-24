@@ -73,7 +73,7 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
 # coherence.io
-/[Aa]ssets/coherence/RuntimeSettings.asset
+/Assets/coherence/RuntimeSettings.asset
 
 # else
 /.vscode
