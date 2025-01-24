@@ -1,13 +1,16 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class GunController : MonoBehaviour
 {
     private ParticleSystem bubbleParticles;
+    Keyboard keyboard;
+
 
     void Start()
     {
         bubbleParticles = GetComponentInChildren<ParticleSystem>();
-        
+        keyboard = Keyboard.current;
         if (bubbleParticles == null)
         {
             Debug.LogError("No Particle System found in child objects!");
@@ -16,7 +19,8 @@ public class GunController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.A))
+
+        if (keyboard.aKey.isPressed)
         {
             if (!bubbleParticles.isPlaying)
                 bubbleParticles.Play(); 
