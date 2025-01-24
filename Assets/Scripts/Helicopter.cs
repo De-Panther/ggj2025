@@ -24,13 +24,13 @@ namespace GGJGame
         return;
       }
       Gamepad gamepad = Gamepad.current;
-      Vector2 leftStick = gamepad.leftStick.ReadValue(); // Height and Sides
-      Vector2 rightStick = gamepad.rightStick.ReadValue(); // Forward and Rotation
+      Vector2 leftStick = gamepad.leftStick.ReadValue(); // Forward and Rotation
+      Vector2 rightStick = gamepad.rightStick.ReadValue(); // Height and Sides
 
-      transform.Rotate(0, rightStick.x * rotationSpeed * Time.deltaTime, 0, Space.Self);
-      transform.Translate(leftStick.x * sidesSpeed * Time.deltaTime,
-        leftStick.y * heightSpeed * Time.deltaTime,
-        rightStick.y * forwardSpeed * Time.deltaTime,
+      transform.Rotate(0, leftStick.x * rotationSpeed * Time.deltaTime, 0, Space.Self);
+      transform.Translate(rightStick.x * sidesSpeed * Time.deltaTime, // Sides
+        rightStick.y * heightSpeed * Time.deltaTime, // Height
+        leftStick.y * forwardSpeed * Time.deltaTime, // Forward
         Space.Self);
     }
   }
