@@ -205,8 +205,6 @@ MonoBehaviour:
       lodStepsActive: 1
     - component: {fileID: 8945004474640522895}
       lodStepsActive: 1
-    - component: {fileID: 7248126539108178290}
-      lodStepsActive: 1
     - component: {fileID: 6135999449508312418}
       lodStepsActive: 1
     - component: {fileID: 73723923867196079}
@@ -247,6 +245,8 @@ MonoBehaviour:
   - rid: 9131829450030186577
   - rid: 9131829450030186579
   - rid: 9131829450030186580
+  - rid: 9131829453269237869
+  - rid: 9131829453269237871
   onNetworkedInstantiation:
     m_PersistentCalls:
       m_Calls: []
@@ -452,6 +452,96 @@ MonoBehaviour:
         unityComponent: {fileID: 6135999449508312418}
         coherenceSync: {fileID: 342784115048514498}
         interpolationSettings: {fileID: 11400000, guid: ae4419d1d9a8643709bf5f6b90c584a5, type: 2}
+    - rid: 9131829453269237869
+      type: {class: DeepPositionBinding, ns: Coherence.Toolkit.Bindings.TransformBindings, asm: Coherence.Toolkit}
+      data:
+        descriptor:
+          rid: 9131829453269237870
+        routing: 0
+        syncMode: 0
+        isPredicted: 0
+        predictionMode: 0
+        guid: 52bd1dd6477d436ab6e03ca9ae4dd8c1
+        archetypeData:
+          type: 7
+          minRange: 0
+          maxRange: 0
+          sampleRate: 20
+          floatCompression: 0
+          fields:
+          - type: 7
+            bits: 32
+            precision: 0.001
+            floatCompression: 0
+        unityComponent: {fileID: 4251067766295256268}
+        coherenceSync: {fileID: 342784115048514498}
+        interpolationSettings: {fileID: 11400000, guid: ae4419d1d9a8643709bf5f6b90c584a5, type: 2}
+    - rid: 9131829453269237870
+      type: {class: Descriptor, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
+      data:
+        name: position
+        monoAssemblyType: UnityEngine.Vector3, UnityEngine
+        required: 0
+        enforcesLODingWhenFieldsOverriden: 1
+        valueSyncCallbackName: 
+        memberType: 64
+        parameterAssemblyTypes: []
+        ownerType:
+          assemblyQualifiedName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        defaultSyncMode: 0
+        CustomData:
+          rid: -2
+        bindingType:
+          assemblyQualifiedName: Coherence.Toolkit.Bindings.TransformBindings.DeepPositionBinding,
+            Coherence.Toolkit, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        oldName: 
+        oldParameterAssemblyTypes: []
+    - rid: 9131829453269237871
+      type: {class: DeepRotationBinding, ns: Coherence.Toolkit.Bindings.TransformBindings, asm: Coherence.Toolkit}
+      data:
+        descriptor:
+          rid: 9131829453269237872
+        routing: 0
+        syncMode: 0
+        isPredicted: 0
+        predictionMode: 0
+        guid: ea41c2936fc049e5897ec006bd9e4b6c
+        archetypeData:
+          type: 8
+          minRange: 0
+          maxRange: 0
+          sampleRate: 20
+          floatCompression: 0
+          fields:
+          - type: 8
+            bits: 32
+            precision: 0.00000008381903171539307
+            floatCompression: 0
+        unityComponent: {fileID: 4251067766295256268}
+        coherenceSync: {fileID: 342784115048514498}
+        interpolationSettings: {fileID: 11400000, guid: ae4419d1d9a8643709bf5f6b90c584a5, type: 2}
+    - rid: 9131829453269237872
+      type: {class: Descriptor, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
+      data:
+        name: rotation
+        monoAssemblyType: UnityEngine.Quaternion, UnityEngine
+        required: 0
+        enforcesLODingWhenFieldsOverriden: 1
+        valueSyncCallbackName: 
+        memberType: 64
+        parameterAssemblyTypes: []
+        ownerType:
+          assemblyQualifiedName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        defaultSyncMode: 0
+        CustomData:
+          rid: -2
+        bindingType:
+          assemblyQualifiedName: Coherence.Toolkit.Bindings.TransformBindings.DeepRotationBinding,
+            Coherence.Toolkit, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        oldName: 
+        oldParameterAssemblyTypes: []
 --- !u!114 &3725017498297863881
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -588,7 +678,6 @@ GameObject:
   - component: {fileID: 1892597546737088473}
   - component: {fileID: 3193959572079367697}
   - component: {fileID: 8945004474640522895}
-  - component: {fileID: 7248126539108178290}
   m_Layer: 0
   m_Name: HandLeft
   m_TagString: Untagged
@@ -685,19 +774,3 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7248126539108178290
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8271838918977669281}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9322c12d93aad6e4c8162c7842763410, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  coherenceSync: {fileID: 0}
-  head: {fileID: 0}
-  handLeft: {fileID: 0}
-  handRight: {fileID: 0}
