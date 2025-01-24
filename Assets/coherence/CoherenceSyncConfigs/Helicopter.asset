@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 579f4a509fd2f994fa391c0c78ea3f11, type: 3}
+  m_Name: Helicopter
+  m_EditorClassIdentifier: 
+  id: 0a0689ed2d0d20049ae79975e5e5e1c1
+  selfId: 7c040cebf1381654592c2b7d2e54e08f
+  editorTarget: {fileID: 6551538551787592365, guid: 0a0689ed2d0d20049ae79975e5e5e1c1, type: 3}
+  includeInSchema: 1
+  objectProvider:
+    rid: 9131829450030186581
+  objectInstantiator:
+    rid: 9131829450030186582
+  references:
+    version: 2
+    RefIds:
+    - rid: 9131829450030186581
+      type: {class: DirectReferenceProvider, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
+      data:
+        prefab: {fileID: 6551538551787592365, guid: 0a0689ed2d0d20049ae79975e5e5e1c1, type: 3}
+    - rid: 9131829450030186582
+      type: {class: DefaultInstantiator, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
+      data: 

@@ -510,6 +510,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9322c12d93aad6e4c8162c7842763410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coherenceSync: {fileID: 342784115048514498}
   deviceHead: {fileID: 0}
   deviceHandLeft: {fileID: 0}
   deviceHandRight: {fileID: 0}
@@ -745,6 +746,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9322c12d93aad6e4c8162c7842763410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coherenceSync: {fileID: 0}
   deviceHead: {fileID: 0}
   deviceHandLeft: {fileID: 0}
   deviceHandRight: {fileID: 0}

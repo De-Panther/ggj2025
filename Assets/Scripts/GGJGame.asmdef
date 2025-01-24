@@ -2,7 +2,8 @@
     "name": "GGJGame",
     "rootNamespace": "",
     "references": [
-        "GUID:fd4abe4ffe74ef1448afe15c6cb36bb7"
+        "GUID:fd4abe4ffe74ef1448afe15c6cb36bb7",
+        "GUID:6fca9c0eaa6a14b189136e4611780b56"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
