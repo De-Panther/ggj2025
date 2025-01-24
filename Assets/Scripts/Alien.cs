@@ -8,12 +8,6 @@ namespace GGJGame
     [SerializeField]
     private CoherenceSync coherenceSync;
     [SerializeField]
-    private Transform deviceHead;
-    [SerializeField]
-    private Transform deviceHandLeft;
-    [SerializeField]
-    private Transform deviceHandRight;
-    [SerializeField]
     private Transform head;
     [SerializeField]
     private Transform handLeft;
@@ -22,13 +16,13 @@ namespace GGJGame
 
     private void Update()
     {
-      if (coherenceSync.HasStateAuthority)
+      if (!coherenceSync.HasStateAuthority)
       {
         return;
       }
-      head.SetLocalPositionAndRotation(deviceHead.localPosition, deviceHead.localRotation);
-      handLeft.SetLocalPositionAndRotation(deviceHandLeft.localPosition, deviceHandLeft.localRotation);
-      handRight.SetLocalPositionAndRotation(handRight.localPosition, handRight.localRotation);
+      head.SetLocalPositionAndRotation(XRReferences.Instance.head.localPosition, XRReferences.Instance.head.localRotation);
+      handLeft.SetLocalPositionAndRotation(XRReferences.Instance.left.localPosition, XRReferences.Instance.left.localRotation);
+      handRight.SetLocalPositionAndRotation(XRReferences.Instance.right.localPosition, XRReferences.Instance.right.localRotation);
     }
   }
 }

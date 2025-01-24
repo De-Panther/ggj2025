@@ -78,58 +78,6 @@ namespace Coherence.Generated
     }
     
     [UnityEngine.Scripting.Preserve]
-    public class Binding_a94174c5022b2c64e8c4ba49a7cbbd0d_70cfd20729e94b1a81bd76c7ed232139 : RotationBinding
-    {   
-        private global::UnityEngine.Transform CastedUnityComponent;
-
-        protected override void OnBindingCloned()
-        {
-    	    CastedUnityComponent = (global::UnityEngine.Transform)UnityComponent;
-        }
-
-        public override global::System.Type CoherenceComponentType => typeof(WorldOrientation);
-        public override string CoherenceComponentName => "WorldOrientation";
-        public override uint FieldMask => 0b00000000000000000000000000000001;
-
-        public override UnityEngine.Quaternion Value
-        {
-            get { return (UnityEngine.Quaternion)(coherenceSync.coherenceRotation); }
-            set { coherenceSync.coherenceRotation = (UnityEngine.Quaternion)(value); }
-        }
-
-        protected override (UnityEngine.Quaternion value, AbsoluteSimulationFrame simFrame) ReadComponentData(ICoherenceComponentData coherenceComponent, Vector3 floatingOriginDelta)
-        {
-            var value = ((WorldOrientation)coherenceComponent).value;
-
-            var simFrame = ((WorldOrientation)coherenceComponent).valueSimulationFrame;
-            
-            return (value, simFrame);
-        }
-
-        public override ICoherenceComponentData WriteComponentData(ICoherenceComponentData coherenceComponent, AbsoluteSimulationFrame simFrame)
-        {
-            var update = (WorldOrientation)coherenceComponent;
-            if (Interpolator.IsInterpolationNone)
-            {
-                update.value = Value;
-            }
-            else
-            {
-                update.value = GetInterpolatedAt(simFrame / InterpolationSettings.SimulationFramesPerSecond);
-            }
-
-            update.valueSimulationFrame = simFrame;
-            
-            return update;
-        }
-
-        public override ICoherenceComponentData CreateComponentData()
-        {
-            return new WorldOrientation();
-        }    
-    }
-    
-    [UnityEngine.Scripting.Preserve]
     public class Binding_a94174c5022b2c64e8c4ba49a7cbbd0d_58e7728a0dd64f9188f83dd50f75c4bd : DeepPositionBinding
     {   
         private global::UnityEngine.Transform CastedUnityComponent;
@@ -351,7 +299,6 @@ namespace Coherence.Generated
         private readonly Dictionary<string, Binding> bakedValueBindings = new Dictionary<string, Binding>()
         {
             ["0749c30ea5b14f4d9a44d743d4560267"] = new Binding_a94174c5022b2c64e8c4ba49a7cbbd0d_0749c30ea5b14f4d9a44d743d4560267(),
-            ["70cfd20729e94b1a81bd76c7ed232139"] = new Binding_a94174c5022b2c64e8c4ba49a7cbbd0d_70cfd20729e94b1a81bd76c7ed232139(),
             ["58e7728a0dd64f9188f83dd50f75c4bd"] = new Binding_a94174c5022b2c64e8c4ba49a7cbbd0d_58e7728a0dd64f9188f83dd50f75c4bd(),
             ["94a9189c1ca94f33b8000839f610ea40"] = new Binding_a94174c5022b2c64e8c4ba49a7cbbd0d_94a9189c1ca94f33b8000839f610ea40(),
             ["f4bf96588f394d3c814d6df0ee45fccd"] = new Binding_a94174c5022b2c64e8c4ba49a7cbbd0d_f4bf96588f394d3c814d6df0ee45fccd(),
