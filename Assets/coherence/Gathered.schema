@@ -1,0 +1,8 @@
+component _a94174c5022b2c64e8c4ba49a7cbbd0d_1966217122525543063 [id "153"]
+  position Vector3 [sim-frames "true", compression "None"]
+  rotation Quaternion [bits "32", sim-frames "true"]
+
+component _a94174c5022b2c64e8c4ba49a7cbbd0d_6135999449508312418 [id "154"]
+  position Vector3 [sim-frames "true", compression "None"]
+  rotation Quaternion [bits "32", sim-frames "true"]
+
