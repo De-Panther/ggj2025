@@ -178,7 +178,8 @@ namespace Coherence.Generated
                 case 151: return GenericFieldColor0.FromInterop(data, dataSize, simFrames, simFramesCount);
                 case 152: return GenericFieldColor1.FromInterop(data, dataSize, simFrames, simFramesCount);
                 case 153: return _a94174c5022b2c64e8c4ba49a7cbbd0d_1966217122525543063.FromInterop(data, dataSize, simFrames, simFramesCount);
-                case 154: return _a94174c5022b2c64e8c4ba49a7cbbd0d_6135999449508312418.FromInterop(data, dataSize, simFrames, simFramesCount);
+                case 154: return _a94174c5022b2c64e8c4ba49a7cbbd0d_4251067766295256268.FromInterop(data, dataSize, simFrames, simFramesCount);
+                case 155: return _a94174c5022b2c64e8c4ba49a7cbbd0d_6135999449508312418.FromInterop(data, dataSize, simFrames, simFramesCount);
             }
 
             throw new ArgumentException($"Unkown component type {type}", nameof(type));
@@ -1889,6 +1890,18 @@ namespace Coherence.Generated
                     return;
                 }
                 case 154:
+                {
+                    var orig = (_a94174c5022b2c64e8c4ba49a7cbbd0d_4251067766295256268)component;
+                    var val = new _a94174c5022b2c64e8c4ba49a7cbbd0d_4251067766295256268.Interop();
+
+                    val.position = orig.position;
+                    val.rotation = orig.rotation;
+
+                    updater.UpdateComponent(entity, componentType, val, 28, component.FieldsMask, component.StoppedMask, frames);
+
+                    return;
+                }
+                case 155:
                 {
                     var orig = (_a94174c5022b2c64e8c4ba49a7cbbd0d_6135999449508312418)component;
                     var val = new _a94174c5022b2c64e8c4ba49a7cbbd0d_6135999449508312418.Interop();
