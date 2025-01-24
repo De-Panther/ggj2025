@@ -136,8 +136,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 50, y: 50, z: 50}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4251067766295256268}
   - {fileID: 1966217122525543063}
@@ -234,7 +234,7 @@ MonoBehaviour:
     Assembly-CSharp
   approveAuthorityTransferRequests: 1
   simulationType: 0
-  authorityTransferType: 2
+  authorityTransferType: 0
   orphanedBehavior: 0
   lifetimeType: 0
   uniquenessType: 0
@@ -243,7 +243,6 @@ MonoBehaviour:
   preserveChildren: 0
   bindings:
   - rid: 9131829450030186571
-  - rid: 9131829450030186573
   - rid: 9131829450030186575
   - rid: 9131829450030186577
   - rid: 9131829450030186579
@@ -312,51 +311,6 @@ MonoBehaviour:
           rid: -2
         bindingType:
           assemblyQualifiedName: Coherence.Toolkit.Bindings.TransformBindings.PositionBinding,
-            Coherence.Toolkit, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-        oldName: 
-        oldParameterAssemblyTypes: []
-    - rid: 9131829450030186573
-      type: {class: RotationBinding, ns: Coherence.Toolkit.Bindings.TransformBindings, asm: Coherence.Toolkit}
-      data:
-        descriptor:
-          rid: 9131829450030186574
-        routing: 0
-        syncMode: 0
-        isPredicted: 0
-        predictionMode: 0
-        guid: 70cfd20729e94b1a81bd76c7ed232139
-        archetypeData:
-          type: 8
-          minRange: 0
-          maxRange: 0
-          sampleRate: 20
-          floatCompression: 0
-          fields:
-          - type: 8
-            bits: 32
-            precision: 0.00000008381903171539307
-            floatCompression: 0
-        unityComponent: {fileID: 2577905873894691099}
-        coherenceSync: {fileID: 342784115048514498}
-        interpolationSettings: {fileID: 11400000, guid: ae4419d1d9a8643709bf5f6b90c584a5, type: 2}
-    - rid: 9131829450030186574
-      type: {class: Descriptor, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
-      data:
-        name: rotation
-        monoAssemblyType: UnityEngine.Quaternion, UnityEngine
-        required: 0
-        enforcesLODingWhenFieldsOverriden: 1
-        valueSyncCallbackName: 
-        memberType: 64
-        parameterAssemblyTypes: []
-        ownerType:
-          assemblyQualifiedName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
-            Culture=neutral, PublicKeyToken=null
-        defaultSyncMode: 0
-        CustomData:
-          rid: -2
-        bindingType:
-          assemblyQualifiedName: Coherence.Toolkit.Bindings.TransformBindings.RotationBinding,
             Coherence.Toolkit, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
         oldName: 
         oldParameterAssemblyTypes: []
@@ -511,9 +465,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coherenceSync: {fileID: 342784115048514498}
-  deviceHead: {fileID: 0}
-  deviceHandLeft: {fileID: 0}
-  deviceHandRight: {fileID: 0}
   head: {fileID: 4251067766295256268}
   handLeft: {fileID: 1966217122525543063}
   handRight: {fileID: 6135999449508312418}
@@ -747,9 +698,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coherenceSync: {fileID: 0}
-  deviceHead: {fileID: 0}
-  deviceHandLeft: {fileID: 0}
-  deviceHandRight: {fileID: 0}
   head: {fileID: 0}
   handLeft: {fileID: 0}
   handRight: {fileID: 0}

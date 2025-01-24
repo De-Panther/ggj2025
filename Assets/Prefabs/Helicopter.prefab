@@ -566,7 +566,7 @@ MonoBehaviour:
     Assembly-CSharp
   approveAuthorityTransferRequests: 1
   simulationType: 0
-  authorityTransferType: 2
+  authorityTransferType: 0
   orphanedBehavior: 0
   lifetimeType: 0
   uniquenessType: 0

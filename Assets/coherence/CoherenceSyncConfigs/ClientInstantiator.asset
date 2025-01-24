@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 579f4a509fd2f994fa391c0c78ea3f11, type: 3}
+  m_Name: ClientInstantiator
+  m_EditorClassIdentifier: 
+  id: 87664088aefd10a4eb2ce9921552136a
+  selfId: b7aa5d26ece83a34cad275875357794c
+  editorTarget: {fileID: 7984024522453199864, guid: 87664088aefd10a4eb2ce9921552136a, type: 3}
+  includeInSchema: 1
+  objectProvider:
+    rid: 9131829453269237833
+  objectInstantiator:
+    rid: 9131829453269237834
+  references:
+    version: 2
+    RefIds:
+    - rid: 9131829453269237833
+      type: {class: DirectReferenceProvider, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
+      data:
+        prefab: {fileID: 7984024522453199864, guid: 87664088aefd10a4eb2ce9921552136a, type: 3}
+    - rid: 9131829453269237834
+      type: {class: DefaultInstantiator, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
+      data: 

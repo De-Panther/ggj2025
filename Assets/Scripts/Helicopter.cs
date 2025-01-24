@@ -13,7 +13,7 @@ namespace GGJGame
     private void Update()
     {
       propeller.Rotate(0, 90*Time.deltaTime, 0, Space.Self);
-      if (coherenceSync.HasStateAuthority)
+      if (!coherenceSync.HasStateAuthority)
       {
         return;
       }
