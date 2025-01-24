@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using UnityEngine.XR.Interaction.Toolkit.UI;
 
 namespace GGJGame
 {
@@ -14,6 +14,8 @@ namespace GGJGame
     public Transform handRight;
     public Transform controllerLeft;
     public Transform controllerRight;
+
+    public LazyFollow nonXRCameraFollow;
 
     private void Awake()
     {

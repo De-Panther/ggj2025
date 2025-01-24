@@ -27,7 +27,7 @@ namespace GGJGame
         helicopterPrefab : alienPrefab);
       if (WebXRManager.Instance.XRState == WebXRState.NORMAL)
       {
-        lazyFollow = FindFirstObjectByType<LazyFollow>(FindObjectsInactive.Include);
+        lazyFollow = XRReferences.Instance.nonXRCameraFollow;
         lazyFollow.target = player.transform;
         lazyFollow.enabled = true;
       }
