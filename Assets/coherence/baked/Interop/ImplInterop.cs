@@ -180,6 +180,7 @@ namespace Coherence.Generated
                 case 153: return _a94174c5022b2c64e8c4ba49a7cbbd0d_1966217122525543063.FromInterop(data, dataSize, simFrames, simFramesCount);
                 case 154: return _a94174c5022b2c64e8c4ba49a7cbbd0d_4251067766295256268.FromInterop(data, dataSize, simFrames, simFramesCount);
                 case 155: return _a94174c5022b2c64e8c4ba49a7cbbd0d_6135999449508312418.FromInterop(data, dataSize, simFrames, simFramesCount);
+                case 156: return _dbac35785ed561c428f6925098e216fa_3788241317174555150.FromInterop(data, dataSize, simFrames, simFramesCount);
             }
 
             throw new ArgumentException($"Unkown component type {type}", nameof(type));
@@ -1910,6 +1911,19 @@ namespace Coherence.Generated
                     val.rotation = orig.rotation;
 
                     updater.UpdateComponent(entity, componentType, val, 28, component.FieldsMask, component.StoppedMask, frames);
+
+                    return;
+                }
+                case 156:
+                {
+                    var orig = (_dbac35785ed561c428f6925098e216fa_3788241317174555150)component;
+                    var val = new _dbac35785ed561c428f6925098e216fa_3788241317174555150.Interop();
+
+                    val.airStolen = orig.airStolen;
+                    val.remainingTime = orig.remainingTime;
+                    val.inGame = orig.inGame ? (System.Byte)1 : (System.Byte)0;
+
+                    updater.UpdateComponent(entity, componentType, val, 9, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }

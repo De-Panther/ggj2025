@@ -7,6 +7,7 @@ namespace GGJGame
 {
   public class ClientInstantiator : MonoBehaviour
   {
+    public static ClientInstantiator Instance;
     [SerializeField]
     private CoherenceSync coherenceSync;
     [SerializeField]
@@ -16,6 +17,7 @@ namespace GGJGame
 
     private GameObject player;
     private LazyFollow lazyFollow;
+    private bool isHelicopter = false;
 
     private void Start()
     {
@@ -23,9 +25,11 @@ namespace GGJGame
       {
         return;
       }
-      player = Instantiate(WebXRManager.Instance.XRState == WebXRState.NORMAL ?
+      Instance = this;
+      isHelicopter = WebXRManager.Instance.XRState == WebXRState.NORMAL;
+      player = Instantiate(isHelicopter ?
         helicopterPrefab : alienPrefab);
-      if (WebXRManager.Instance.XRState == WebXRState.NORMAL)
+      if (isHelicopter)
       {
         lazyFollow = XRReferences.Instance.nonXRCameraFollow;
         lazyFollow.target = player.transform;
@@ -40,6 +44,11 @@ namespace GGJGame
         lazyFollow.enabled = false;
       }
       Destroy(player);
+    }
+
+    public bool GetIsHelicopter()
+    {
+      return isHelicopter;
     }
   }
 }
