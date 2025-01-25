@@ -16,6 +16,11 @@ namespace GGJGame
     [SerializeField]
     private GunController gunController;
 
+    private void Start()
+    {
+      gunController.StartFire();
+    }
+
     private void Update()
     {
       if (!coherenceSync.HasStateAuthority)

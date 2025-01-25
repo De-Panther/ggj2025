@@ -6,7 +6,7 @@ namespace GGJGame
   {
     private ParticleSystem bubbleParticles;
 
-    void Start()
+    void Awake()
     {
       bubbleParticles = GetComponentInChildren<ParticleSystem>();
       if (bubbleParticles == null)
