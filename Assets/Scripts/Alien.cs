@@ -13,6 +13,8 @@ namespace GGJGame
     private Transform handLeft;
     [SerializeField]
     private Transform handRight;
+    [SerializeField]
+    private GunController gunController;
 
     private void Update()
     {
@@ -23,6 +25,7 @@ namespace GGJGame
       head.SetLocalPositionAndRotation(XRReferences.Instance.head.localPosition, XRReferences.Instance.head.localRotation);
       handLeft.SetLocalPositionAndRotation(XRReferences.Instance.left.localPosition, XRReferences.Instance.left.localRotation);
       handRight.SetLocalPositionAndRotation(XRReferences.Instance.right.localPosition, XRReferences.Instance.right.localRotation);
+      // TODO: Start/Stop fire the gun when right controller trigger
     }
   }
 }

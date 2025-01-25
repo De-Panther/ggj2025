@@ -1,34 +1,43 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
-public class GunController : MonoBehaviour
+namespace GGJGame
 {
+  public class GunController : MonoBehaviour
+  {
     private ParticleSystem bubbleParticles;
-    Keyboard keyboard;
-
 
     void Start()
     {
-        bubbleParticles = GetComponentInChildren<ParticleSystem>();
-        keyboard = Keyboard.current;
-        if (bubbleParticles == null)
-        {
-            Debug.LogError("No Particle System found in child objects!");
-        }
+      bubbleParticles = GetComponentInChildren<ParticleSystem>();
+      if (bubbleParticles == null)
+      {
+        Debug.LogError("No Particle System found in child objects!");
+        enabled = false;
+      }
     }
 
-    void Update()
+    public void StartFire()
     {
-
-        if (keyboard.aKey.isPressed)
-        {
-            if (!bubbleParticles.isPlaying)
-                bubbleParticles.Play(); 
-        }
-        else
-        {
-            if (bubbleParticles.isPlaying)
-                bubbleParticles.Stop();
-        }
+      if (!enabled)
+      {
+        return;
+      }
+      if (!bubbleParticles.isPlaying)
+      {
+        bubbleParticles.Play();
+      }
     }
+
+    public void StopFire()
+    {
+      if (!enabled)
+      {
+        return;
+      }
+      if (bubbleParticles.isPlaying)
+      {
+        bubbleParticles.Stop();
+      }
+    }
+  }
 }
