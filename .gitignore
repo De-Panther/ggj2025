@@ -77,3 +77,4 @@ crashlytics-build.properties
 
 # else
 /.vscode
+*.DS_Store
