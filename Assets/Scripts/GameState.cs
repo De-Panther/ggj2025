@@ -53,6 +53,7 @@ namespace GGJGame
       remainingTime -= Time.deltaTime;
       if (remainingTime < 0.01)
       {
+        airStolen = UnityEngine.Random.Range(100f, maxAir);
         inGame = false;
       }
     }
