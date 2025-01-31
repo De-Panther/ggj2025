@@ -6853,8 +6853,8 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: d5604a199b926f84da4e77fa36deec78, type: 3}
-    m_FontSize: 14
-    m_FontStyle: 0
+    m_FontSize: 18
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 40
@@ -6864,7 +6864,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Join a Room
+  m_Text: Join a Room as Alien
 --- !u!1 &7370458588221091175
 GameObject:
   m_ObjectHideFlags: 0

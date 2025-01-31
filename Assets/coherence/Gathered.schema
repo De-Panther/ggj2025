@@ -11,7 +11,7 @@ component _a94174c5022b2c64e8c4ba49a7cbbd0d_6135999449508312418 [id "155"]
   rotation Quaternion [bits "32", sim-frames "true"]
 
 component _dbac35785ed561c428f6925098e216fa_3788241317174555150 [id "156"]
-  airStolen Float [sim-frames "true", compression "None"]
-  remainingTime Float [sim-frames "true", compression "None"]
+  airStolen Float [compression "None"]
+  remainingTime Float [compression "None"]
   inGame Bool [bits "1"]
 

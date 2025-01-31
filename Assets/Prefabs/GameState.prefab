@@ -199,7 +199,7 @@ MonoBehaviour:
             floatCompression: 0
         unityComponent: {fileID: 3788241317174555150}
         coherenceSync: {fileID: 8234998700619222335}
-        interpolationSettings: {fileID: 11400000, guid: ae4419d1d9a8643709bf5f6b90c584a5, type: 2}
+        interpolationSettings: {fileID: 0}
     - rid: 9131829473949778001
       type: {class: Descriptor, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
       data:
@@ -244,7 +244,7 @@ MonoBehaviour:
             floatCompression: 0
         unityComponent: {fileID: 3788241317174555150}
         coherenceSync: {fileID: 8234998700619222335}
-        interpolationSettings: {fileID: 11400000, guid: ae4419d1d9a8643709bf5f6b90c584a5, type: 2}
+        interpolationSettings: {fileID: 0}
     - rid: 9131829473949778004
       type: {class: Descriptor, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
       data:

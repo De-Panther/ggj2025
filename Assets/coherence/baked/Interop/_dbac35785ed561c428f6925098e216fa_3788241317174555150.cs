@@ -50,8 +50,8 @@ namespace Coherence.Generated
                     "for component with ID 156");
             }
 
-            if (simFramesCount != 2) {
-                throw new Exception($"Given simFrames size is not equal to the expected length. ({simFramesCount} != 2) " +
+            if (simFramesCount != 0) {
+                throw new Exception($"Given simFrames size is not equal to the expected length. ({simFramesCount} != 0) " +
                     "for component with ID 156");
             }
 
@@ -60,9 +60,7 @@ namespace Coherence.Generated
             var comp = (Interop*)data;
 
             orig.airStolen = comp->airStolen;
-            orig.airStolenSimulationFrame = simFrames[0].Into();
             orig.remainingTime = comp->remainingTime;
-            orig.remainingTimeSimulationFrame = simFrames[1].Into();
             orig.inGame = comp->inGame != 0;
 
             return orig;
@@ -88,18 +86,9 @@ namespace Coherence.Generated
         public bool HasFields() => true;
         public bool HasRefFields() => false;
 
-        private long[] simulationFrames;
 
         public long[] GetSimulationFrames() {
-            if (simulationFrames == null)
-            {
-                simulationFrames = new long[2];
-            }
-
-            simulationFrames[0] = airStolenSimulationFrame;
-            simulationFrames[1] = remainingTimeSimulationFrame;
-
-            return simulationFrames;
+            return null;
         }
 
         public int GetFieldCount() => 3;
@@ -135,14 +124,6 @@ namespace Coherence.Generated
         {
             AbsoluteSimulationFrame? min = null;
 
-            if ((FieldsMask & _dbac35785ed561c428f6925098e216fa_3788241317174555150.airStolenMask) != 0 && (min == null || this.airStolenSimulationFrame < min))
-            {
-                min = this.airStolenSimulationFrame;
-            }
-            if ((FieldsMask & _dbac35785ed561c428f6925098e216fa_3788241317174555150.remainingTimeMask) != 0 && (min == null || this.remainingTimeSimulationFrame < min))
-            {
-                min = this.remainingTimeSimulationFrame;
-            }
 
             return min;
         }
@@ -197,16 +178,6 @@ namespace Coherence.Generated
 
             if (bitStream.WriteMask((mask & 0x01) != 0))
             {
-                if (isRefSimFrameValid) {
-                    var simFrameDelta = data.airStolenSimulationFrame - referenceSimulationFrame;
-                    if (simFrameDelta > byte.MaxValue) {
-                        simFrameDelta = byte.MaxValue;
-                    }
-
-                    SerializeTools.WriteFieldSimFrameDelta(bitStream, (byte)simFrameDelta);
-                } else {
-                    SerializeTools.WriteFieldSimFrameDelta(bitStream, 0);
-                }
 
 
                 var fieldValue = data.airStolen;
@@ -219,16 +190,6 @@ namespace Coherence.Generated
             mask >>= 1;
             if (bitStream.WriteMask((mask & 0x01) != 0))
             {
-                if (isRefSimFrameValid) {
-                    var simFrameDelta = data.remainingTimeSimulationFrame - referenceSimulationFrame;
-                    if (simFrameDelta > byte.MaxValue) {
-                        simFrameDelta = byte.MaxValue;
-                    }
-
-                    SerializeTools.WriteFieldSimFrameDelta(bitStream, (byte)simFrameDelta);
-                } else {
-                    SerializeTools.WriteFieldSimFrameDelta(bitStream, 0);
-                }
 
 
                 var fieldValue = data.remainingTime;
@@ -266,14 +227,12 @@ namespace Coherence.Generated
             var val = new _dbac35785ed561c428f6925098e216fa_3788241317174555150();
             if (bitStream.ReadMask())
             {
-                val.airStolenSimulationFrame = referenceSimulationFrame + DeserializerTools.ReadFieldSimFrameDelta(bitStream);
 
                 val.airStolen = bitStream.ReadFloat(FloatMeta.NoCompression());
                 val.FieldsMask |= _dbac35785ed561c428f6925098e216fa_3788241317174555150.airStolenMask;
             }
             if (bitStream.ReadMask())
             {
-                val.remainingTimeSimulationFrame = referenceSimulationFrame + DeserializerTools.ReadFieldSimFrameDelta(bitStream);
 
                 val.remainingTime = bitStream.ReadFloat(FloatMeta.NoCompression());
                 val.FieldsMask |= _dbac35785ed561c428f6925098e216fa_3788241317174555150.remainingTimeMask;
@@ -295,9 +254,7 @@ namespace Coherence.Generated
         {
             return $"_dbac35785ed561c428f6925098e216fa_3788241317174555150(" +
                 $" airStolen: { this.airStolen }" +
-                $", airStolenSimFrame: { this.airStolenSimulationFrame }" +
                 $" remainingTime: { this.remainingTime }" +
-                $", remainingTimeSimFrame: { this.remainingTimeSimulationFrame }" +
                 $" inGame: { this.inGame }" +
                 $" Mask: { System.Convert.ToString(FieldsMask, 2).PadLeft(3, '0') }, " +
                 $"Stopped: { System.Convert.ToString(StoppedMask, 2).PadLeft(3, '0') })";

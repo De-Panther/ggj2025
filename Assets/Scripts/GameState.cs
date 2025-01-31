@@ -28,6 +28,18 @@ namespace GGJGame
       Instance = this;
     }
 
+    private void OnEnable()
+    {
+      Alien.OnTotalChanged += CheckPlayers;
+      Helicopter.OnTotalChanged += CheckPlayers;
+    }
+
+    private void OnDisable()
+    {
+      Alien.OnTotalChanged -= CheckPlayers;
+      Helicopter.OnTotalChanged -= CheckPlayers;
+    }
+
     private void Update()
     {
       if (prevInGame < 0 || (prevInGame == 0 && inGame) || (prevInGame == 1 && !inGame))
@@ -62,6 +74,15 @@ namespace GGJGame
     {
       remainingTime = maxTime;
       inGame = true;
+    }
+
+    private void CheckPlayers()
+    {
+      if (!inGame)
+      {
+        return;
+      }
+      inGame = Helicopter.totalHelicopters > 0 && Alien.totalAliens > 0;
     }
   }
 }
