@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit.UI;
 using Coherence.Toolkit;
@@ -7,6 +8,7 @@ namespace GGJGame
 {
   public class ClientInstantiator : MonoBehaviour
   {
+    public static Action OnInstanceCreated;
     public static ClientInstantiator Instance;
     [SerializeField]
     private CoherenceSync coherenceSync;
@@ -35,6 +37,7 @@ namespace GGJGame
         lazyFollow.target = player.transform;
         lazyFollow.enabled = true;
       }
+      OnInstanceCreated?.Invoke();
     }
 
     private void OnDestroy()

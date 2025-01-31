@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Coherence.Toolkit;
@@ -6,6 +7,8 @@ namespace GGJGame
 {
   public class Helicopter : MonoBehaviour
   {
+    public static Action OnTotalChanged;
+    public static int totalHelicopters { get; private set; } = 0;
     [SerializeField]
     private CoherenceSync coherenceSync;
     [SerializeField]
@@ -18,6 +21,18 @@ namespace GGJGame
     private float forwardSpeed = 10f;
     private float rotationSpeed = 45f;
 
+    private void OnEnable()
+    {
+      totalHelicopters++;
+      OnTotalChanged?.Invoke();
+    }
+
+    private void OnDisable()
+    {
+      totalHelicopters--;
+      OnTotalChanged?.Invoke();
+    }
+
     private void Update()
     {
       propeller.Rotate(0, 90*Time.deltaTime, 0, Space.Self);
@@ -26,6 +41,10 @@ namespace GGJGame
         return;
       }
       Gamepad gamepad = Gamepad.current;
+      if (gamepad == null)
+      {
+        return;
+      }
       Vector2 leftStick = gamepad.leftStick.ReadValue(); // Forward and Rotation
       Vector2 rightStick = gamepad.rightStick.ReadValue(); // Height and Sides
 

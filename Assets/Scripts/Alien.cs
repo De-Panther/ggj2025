@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using Coherence.Toolkit;
 
@@ -5,6 +6,8 @@ namespace GGJGame
 {
   public class Alien : MonoBehaviour
   {
+    public static Action OnTotalChanged;
+    public static int totalAliens { get; private set; } = 0;
     [SerializeField]
     private CoherenceSync coherenceSync;
     [SerializeField]
@@ -19,6 +22,18 @@ namespace GGJGame
     private void Start()
     {
       gunController.StartFire();
+    }
+
+    private void OnEnable()
+    {
+      totalAliens++;
+      OnTotalChanged?.Invoke();
+    }
+
+    private void OnDisable()
+    {
+      totalAliens--;
+      OnTotalChanged?.Invoke();
     }
 
     private void Update()

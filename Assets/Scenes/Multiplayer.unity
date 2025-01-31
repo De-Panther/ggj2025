@@ -1271,25 +1271,13 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3622941442531413045, guid: 47bfc7d4e7a8be04aa7db3894a7a52ad, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3622941442531413045, guid: 47bfc7d4e7a8be04aa7db3894a7a52ad, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3622941442531413045, guid: 47bfc7d4e7a8be04aa7db3894a7a52ad, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3622941442531413045, guid: 47bfc7d4e7a8be04aa7db3894a7a52ad, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3952370781704756412, guid: 47bfc7d4e7a8be04aa7db3894a7a52ad, type: 3}
       propertyPath: m_Name
       value: Normal Room Connection Dialog
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952370781704756412, guid: 47bfc7d4e7a8be04aa7db3894a7a52ad, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4633587750142311450, guid: 47bfc7d4e7a8be04aa7db3894a7a52ad, type: 3}
       propertyPath: m_SizeDelta.y
@@ -1297,7 +1285,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4633587750142311450, guid: 47bfc7d4e7a8be04aa7db3894a7a52ad, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.00024996314
+      value: -0.0007445147
       objectReference: {fileID: 0}
     - target: {fileID: 6663244531573236335, guid: 47bfc7d4e7a8be04aa7db3894a7a52ad, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1491,10 +1479,6 @@ PrefabInstance:
     - target: {fileID: 207927447555471451, guid: a7ed48b3f3cd4d04b8d41be532234b4d, type: 3}
       propertyPath: m_Name
       value: XR Origin (XR Rig)
-      objectReference: {fileID: 0}
-    - target: {fileID: 207927447555471451, guid: a7ed48b3f3cd4d04b8d41be532234b4d, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1704,7 +1688,7 @@ PrefabInstance:
     - target: {fileID: 7710517235854928788, guid: 44e8bf67d4fb55241a71acd99942e7af, type: 3}
       propertyPath: m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 5540244647393039935}
     - target: {fileID: 7734235527741861920, guid: 44e8bf67d4fb55241a71acd99942e7af, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
