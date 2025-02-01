@@ -11,9 +11,8 @@ namespace GGJGame
     public static Action OnGameEnd;
     public static Action OnGameStart;
 
-    public const float maxAir = 700f;
-    public const float minAirAlienNeeds = 400f;
-    private const float maxTime = 120f;
+    public const float minAirAlienNeeds = 60f;
+    private const float maxTime = 60f;
 
     [SerializeField]
     private CoherenceSync coherenceSync;
@@ -63,9 +62,8 @@ namespace GGJGame
         return;
       }
       remainingTime -= Time.deltaTime;
-      if (remainingTime < 0.01)
+      if (remainingTime < 0.01 || airStolen >= minAirAlienNeeds)
       {
-        airStolen = UnityEngine.Random.Range(100f, maxAir);
         inGame = false;
       }
     }
@@ -79,7 +77,21 @@ namespace GGJGame
     public void SetGameForStart()
     {
       remainingTime = maxTime;
+      airStolen = 0;
       inGame = true;
+    }
+
+    public void AddAirStolen()
+    {
+      if (!inGame)
+      {
+        return;
+      }
+      if (!coherenceSync.HasStateAuthority)
+      {
+        return;
+      }
+      airStolen++;
     }
 
     public void HandleOnStateAuthority()

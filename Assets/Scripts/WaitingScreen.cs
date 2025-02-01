@@ -14,8 +14,10 @@ namespace GGJGame
     public Text scoreText;
     public Text waitingText;
     public Text roomNameText;
+    public Text inGameScoreText;
 
     private bool hadOneGame = false;
+    private float nextUpdate = 0;
 
     private void OnEnable()
     {
@@ -37,9 +39,24 @@ namespace GGJGame
       Helicopter.OnTotalChanged -= CheckPlayers;
     }
 
+    private void Update()
+    {
+      if (!GameState.Instance.inGame)
+      {
+        return;
+      }
+      if (nextUpdate > Time.realtimeSinceStartup)
+      {
+        return;
+      }
+      nextUpdate = Time.realtimeSinceStartup + 1;
+      inGameScoreText.text = $"O stolen:\n{GameState.Instance.airStolen} / {GameState.minAirAlienNeeds}";
+    }
+
     private void HandleOnGameEnd()
     {
       CheckState();
+      inGameScoreText.text = $"O stolen:\n{GameState.Instance.airStolen} / {GameState.minAirAlienNeeds}";
     }
 
     private void HandleOnGameStart()
@@ -68,7 +85,7 @@ namespace GGJGame
         (helicopterWin ? "Helicopters win!" : "Helicopters lost!") :
         (helicopterWin ? "Aliens lost!" : "Aliens win!");
       scoreLabel.SetActive(hadOneGame);
-      scoreText.text = $"{GameState.Instance.airStolen} kg Oxygen stolen";
+      scoreText.text = $"{GameState.Instance.airStolen} kg Oxygen stolen\nof {GameState.minAirAlienNeeds} Alien goal";
       roomNameText.text = $"Room: {Coherence.Samples.RoomsDialog.RoomsDialogUI.currentRoomName}";
       CheckPlayers();
     }
