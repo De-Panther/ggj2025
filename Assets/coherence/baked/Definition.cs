@@ -20,7 +20,7 @@ namespace Coherence.Generated
 
     public class Definition : IDefinition
     {
-        public const string schemaId = "a88553a8acc2e16026e49eb9fd9c0b5868559617";
+        public const string schemaId = "fe675fb1d1775b1670a45a0bc982a9fdad482c61";
         public const uint InternalWorldPosition = 0;
         public const uint InternalWorldOrientation = 1;
         public const uint InternalLocalUserComponent = 2;
@@ -185,6 +185,7 @@ namespace Coherence.Generated
         public const uint InternalPersistenceReady = 4;
         public const uint InternalSceneIndexChanged = 5;
         public const uint InternalGenericCommand = 6;
+        public const uint Internal_dbac35785ed561c428f6925098e216fa_620044fc95cf41068d8e01ab01bd2658 = 7;
 
         private static readonly Dictionary<uint, string> componentNamesForTypeIds = new Dictionary<uint, string>()
         {
@@ -368,6 +369,7 @@ namespace Coherence.Generated
             { Definition.InternalPersistenceReady , MessageTarget.All },
             { Definition.InternalSceneIndexChanged , MessageTarget.All },
             { Definition.InternalGenericCommand , MessageTarget.All },
+            { Definition.Internal_dbac35785ed561c428f6925098e216fa_620044fc95cf41068d8e01ab01bd2658 , MessageTarget.AuthorityOnly },
         };
 
         public ICoherenceComponentData ReadComponentUpdate(uint componentType, AbsoluteSimulationFrame referenceSimulationFrame,
@@ -1040,6 +1042,8 @@ namespace Coherence.Generated
                     return SceneIndexChanged.Deserialize(bitStream, entity, target);
                 case Definition.InternalGenericCommand:
                     return GenericCommand.Deserialize(bitStream, entity, target);
+                case Definition.Internal_dbac35785ed561c428f6925098e216fa_620044fc95cf41068d8e01ab01bd2658:
+                    return _dbac35785ed561c428f6925098e216fa_620044fc95cf41068d8e01ab01bd2658.Deserialize(bitStream, entity, target);
                 default:
                     throw new System.ArgumentOutOfRangeException(nameof(commandType),
                         $"Missing serialization implementation for a command: {commandType}");
@@ -1129,6 +1133,9 @@ namespace Coherence.Generated
                     break;
                 case Definition.InternalGenericCommand:
                     GenericCommand.Serialize((GenericCommand)data, bitStream);
+                    break;
+                case Definition.Internal_dbac35785ed561c428f6925098e216fa_620044fc95cf41068d8e01ab01bd2658:
+                    _dbac35785ed561c428f6925098e216fa_620044fc95cf41068d8e01ab01bd2658.Serialize((_dbac35785ed561c428f6925098e216fa_620044fc95cf41068d8e01ab01bd2658)data, bitStream);
                     break;
                 default:
                     logger.Error("Missing serialization implementation for a command.", ("command", commandType));

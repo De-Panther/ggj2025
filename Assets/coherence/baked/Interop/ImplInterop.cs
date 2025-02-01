@@ -1943,6 +1943,7 @@ namespace Coherence.Generated
                   case 4: return PersistenceReady.FromInterop(data, dataSize);
                   case 5: return SceneIndexChanged.FromInterop(data, dataSize);
                   case 6: return GenericCommand.FromInterop(data, dataSize);
+                  case 7: return _dbac35785ed561c428f6925098e216fa_620044fc95cf41068d8e01ab01bd2658.FromInterop(data, dataSize);
             }
 
             throw new ArgumentException($"Unkown command type {type}", nameof(type));
@@ -2041,6 +2042,16 @@ namespace Coherence.Generated
                     return sender.SendCommand(entity, target, type, val, 48);
 
 }}                }
+
+                case 7:
+                {
+                    var orig = (_dbac35785ed561c428f6925098e216fa_620044fc95cf41068d8e01ab01bd2658)command;
+                    var val = new _dbac35785ed561c428f6925098e216fa_620044fc95cf41068d8e01ab01bd2658.Interop();
+
+
+                    return sender.SendCommand(entity, target, type, val, 0);
+
+                }
 
             }
 

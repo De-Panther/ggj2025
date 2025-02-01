@@ -15,3 +15,5 @@ component _dbac35785ed561c428f6925098e216fa_3788241317174555150 [id "156"]
   remainingTime Float [compression "None"]
   inGame Bool [bits "1"]
 
+command _dbac35785ed561c428f6925098e216fa_620044fc95cf41068d8e01ab01bd2658 [id "7", routing "AuthorityOnly"]
+

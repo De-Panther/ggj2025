@@ -72,6 +72,12 @@ namespace GGJGame
 
     public void StartGame()
     {
+      coherenceSync.SendCommand<GameState>(nameof(SetGameForStart),
+        Coherence.MessageTarget.AuthorityOnly);
+    }
+
+    public void SetGameForStart()
+    {
       remainingTime = maxTime;
       inGame = true;
     }
