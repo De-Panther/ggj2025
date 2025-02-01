@@ -246,19 +246,19 @@ MonoBehaviour:
       lodStepsActive: 1
     - component: {fileID: 2678576069565669490}
       lodStepsActive: 1
-    - component: {fileID: 4071647248195955905}
+    - component: {fileID: 0}
       lodStepsActive: 1
-    - component: {fileID: 4192921146578581369}
+    - component: {fileID: 0}
       lodStepsActive: 1
-    - component: {fileID: 4201204312436002781}
+    - component: {fileID: 0}
       lodStepsActive: 1
-    - component: {fileID: 4493222051024539251}
+    - component: {fileID: 0}
       lodStepsActive: 1
-    - component: {fileID: 4071647246584870705}
+    - component: {fileID: 0}
       lodStepsActive: 1
-    - component: {fileID: 4192921151926661487}
+    - component: {fileID: 0}
       lodStepsActive: 1
-    - component: {fileID: 4201204319180283399}
+    - component: {fileID: 0}
       lodStepsActive: 1
     - component: {fileID: 6841317432381953282}
       lodStepsActive: 1
@@ -924,11 +924,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7295695086956187471, guid: e536778a8401a834fb23a40836d866d1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.43
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 7295695086956187471, guid: e536778a8401a834fb23a40836d866d1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.41
+      value: 4.5
       objectReference: {fileID: 0}
     - target: {fileID: 7295695086956187471, guid: e536778a8401a834fb23a40836d866d1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -972,47 +972,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 03aba77973c464105a274b7f95d660ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &4071647246584870705 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2312081624889213504, guid: e536778a8401a834fb23a40836d866d1, type: 3}
-  m_PrefabInstance: {fileID: 1771968978296092017}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &4071647248195955905 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2312081622204357040, guid: e536778a8401a834fb23a40836d866d1, type: 3}
-  m_PrefabInstance: {fileID: 1771968978296092017}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &4192921146578581369 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 2497092012781830664, guid: e536778a8401a834fb23a40836d866d1, type: 3}
-  m_PrefabInstance: {fileID: 1771968978296092017}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &4192921151926661487 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 2497092024563844126, guid: e536778a8401a834fb23a40836d866d1, type: 3}
-  m_PrefabInstance: {fileID: 1771968978296092017}
-  m_PrefabAsset: {fileID: 0}
---- !u!199 &4201204312436002781 stripped
-ParticleSystemRenderer:
-  m_CorrespondingSourceObject: {fileID: 2511567638863280812, guid: e536778a8401a834fb23a40836d866d1, type: 3}
-  m_PrefabInstance: {fileID: 1771968978296092017}
-  m_PrefabAsset: {fileID: 0}
---- !u!199 &4201204319180283399 stripped
-ParticleSystemRenderer:
-  m_CorrespondingSourceObject: {fileID: 2511567630574971766, guid: e536778a8401a834fb23a40836d866d1, type: 3}
-  m_PrefabInstance: {fileID: 1771968978296092017}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &4493222051024539251 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2795730157138918146, guid: e536778a8401a834fb23a40836d866d1, type: 3}
-  m_PrefabInstance: {fileID: 1771968978296092017}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89b7fbfcc218340f1bcb27f4d80c40ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!95 &6841317432372966370 stripped
