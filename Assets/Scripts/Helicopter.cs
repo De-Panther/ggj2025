@@ -14,6 +14,8 @@ namespace GGJGame
     [SerializeField]
     private Transform propeller;
     [SerializeField]
+    private Transform backPropeller;
+    [SerializeField]
     private Rigidbody _Rigidbody;
 
     private float heightSpeed = 14f;
@@ -39,7 +41,9 @@ namespace GGJGame
 
     private void Update()
     {
-      propeller.Rotate(0, propellerSpeed * Time.deltaTime * (1 + Mathf.Abs(leftStick.x) + Mathf.Abs(leftStick.y) + Mathf.Abs(rightStick.x) + Mathf.Clamp(rightStick.y, -0.25f, 1f)), 0, Space.Self);
+      float propellerRotation = propellerSpeed * Time.deltaTime * (1 + Mathf.Abs(leftStick.x) + Mathf.Abs(leftStick.y) + Mathf.Abs(rightStick.x) + Mathf.Clamp(rightStick.y, -0.25f, 1f));
+      propeller.Rotate(0, propellerRotation, 0, Space.Self);
+      backPropeller.Rotate(propellerRotation, 0, 0, Space.Self);
       if (!coherenceSync.HasStateAuthority)
       {
         return;
