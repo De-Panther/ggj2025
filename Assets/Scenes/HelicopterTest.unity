@@ -1807,7 +1807,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Target: {fileID: 37971590}
-  m_TargetOffset: {x: 0, y: 4, z: -15}
+  m_TargetOffset: {x: 0, y: 4, z: -20}
   m_FollowInLocalSpace: 0
   m_ApplyTargetInLocalSpace: 0
   m_MovementSpeed: 6

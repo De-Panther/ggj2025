@@ -696,6 +696,8 @@ MonoBehaviour:
   handRight: {fileID: 5540244647393039933}
   controllerLeft: {fileID: 5540244647393039932}
   controllerRight: {fileID: 5540244647393039931}
+  mobileLeft: {fileID: 532629401}
+  mobileRight: {fileID: 532629400}
   nonXRCameraFollow: {fileID: 1325893724}
 --- !u!4 &175757271
 Transform:
@@ -1307,6 +1309,16 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4804831366513217009, guid: 06ee119780f67cd4a8d90cd4f2c69af0, type: 3}
   m_PrefabInstance: {fileID: 474191298}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &532629400 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1800703723560190736, guid: a7ed48b3f3cd4d04b8d41be532234b4d, type: 3}
+  m_PrefabInstance: {fileID: 5540244647393039930}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &532629401 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6428094220099361227, guid: a7ed48b3f3cd4d04b8d41be532234b4d, type: 3}
+  m_PrefabInstance: {fileID: 5540244647393039930}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &548206982
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1415,7 +1427,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 8b86a584b4fcf4aa295e30c0e90dc676, type: 3}
   m_Resource: {fileID: 8300000, guid: 8b86a584b4fcf4aa295e30c0e90dc676, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.2
+  m_Volume: 0.17
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -2646,7 +2658,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Target: {fileID: 0}
-  m_TargetOffset: {x: 0, y: 4, z: -15}
+  m_TargetOffset: {x: 0, y: 4, z: -35}
   m_FollowInLocalSpace: 0
   m_ApplyTargetInLocalSpace: 0
   m_MovementSpeed: 6
@@ -4133,6 +4145,10 @@ PrefabInstance:
     - target: {fileID: 207927447555471451, guid: a7ed48b3f3cd4d04b8d41be532234b4d, type: 3}
       propertyPath: m_Name
       value: XR Origin (XR Rig)
+      objectReference: {fileID: 0}
+    - target: {fileID: 207927447555471451, guid: a7ed48b3f3cd4d04b8d41be532234b4d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
