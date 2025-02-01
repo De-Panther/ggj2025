@@ -4,7 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Multiplayer.unity
+    guid: 7731d239e2b7e8e4db9aac819ff8eba1
   m_configObjects:
     WebXR.Settings: {fileID: 11400000, guid: 3a0c2b946afbff642adf418cbdede011, type: 2}
     com.unity.input.settings: {fileID: 11400000, guid: 1185f42c6cecdc1438a4dbe29c6f276c, type: 2}
