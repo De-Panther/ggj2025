@@ -11,7 +11,7 @@ namespace GGJGame
     public static Action OnGameEnd;
     public static Action OnGameStart;
 
-    public const float minAirAlienNeeds = 60f;
+    public const float minAirAlienNeeds = 300f;
     private const float maxTime = 60f;
 
     [SerializeField]
