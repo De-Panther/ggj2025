@@ -82,9 +82,18 @@ namespace GGJGame
       inGame = true;
     }
 
+    public void HandleOnStateAuthority()
+    {
+      CheckPlayers();
+    }
+
     private void CheckPlayers()
     {
       if (!inGame)
+      {
+        return;
+      }
+      if (!coherenceSync.HasStateAuthority)
       {
         return;
       }
