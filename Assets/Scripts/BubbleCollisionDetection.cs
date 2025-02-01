@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
 
 public class BubbleCollisionDetection : MonoBehaviour
@@ -15,17 +14,6 @@ public class BubbleCollisionDetection : MonoBehaviour
 
     void OnParticleCollision(GameObject other)
     {
-        if(other.tag == "Helicopter")
-        {
-            Debug.Log("Helicopter");
-        }
-        else if (other.tag == "UFO")
-        {
-            Debug.Log("UFO");
-        }
-        else
-        {
-            Debug.Log(other.tag);
-        }
+      Debug.Log($"{other.tag} {other.name}");
     }
 }

@@ -42,9 +42,9 @@ namespace GGJGame
       {
         return;
       }
-      head.SetLocalPositionAndRotation(XRReferences.Instance.head.localPosition, XRReferences.Instance.head.localRotation);
-      handLeft.SetLocalPositionAndRotation(XRReferences.Instance.left.localPosition, XRReferences.Instance.left.localRotation);
-      handRight.SetLocalPositionAndRotation(XRReferences.Instance.right.localPosition, XRReferences.Instance.right.localRotation);
+      head.SetPositionAndRotation(XRReferences.Instance.head.position, XRReferences.Instance.head.rotation);
+      handLeft.SetPositionAndRotation(XRReferences.Instance.left.position, XRReferences.Instance.left.rotation);
+      handRight.SetPositionAndRotation(XRReferences.Instance.right.position, XRReferences.Instance.right.rotation);
       // TODO: Start/Stop fire the gun when right controller trigger
     }
   }
