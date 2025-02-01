@@ -1,12 +1,11 @@
 {
-    "name": "GGJGame",
+    "name": "CoherenceSamples",
     "rootNamespace": "",
     "references": [
-        "GUID:fd4abe4ffe74ef1448afe15c6cb36bb7",
-        "GUID:6fca9c0eaa6a14b189136e4611780b56",
-        "GUID:fe685ec1767f73d42b749ea8045bfe43",
-        "GUID:75469ad4d38634e559750d17036d5f7c",
-        "GUID:580c12324c2674941a92635e363b51e6"
+        "Coherence",
+        "Coherence.Common",
+        "Coherence.Runtime",
+        "Coherence.Toolkit"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

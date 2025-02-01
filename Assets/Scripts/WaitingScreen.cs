@@ -13,12 +13,14 @@ namespace GGJGame
     public GameObject scoreLabel;
     public Text scoreText;
     public Text waitingText;
+    public Text roomNameText;
 
     private bool hadOneGame = false;
 
     private void OnEnable()
     {
       hadOneGame = false;
+      screen.SetActive(false);
       GameState.OnGameEnd += HandleOnGameEnd;
       GameState.OnGameStart += HandleOnGameStart;
       ClientInstantiator.OnInstanceCreated += HandleOnInstanceCreated;
@@ -67,6 +69,7 @@ namespace GGJGame
         (helicopterWin ? "Aliens lost!" : "Aliens win!");
       scoreLabel.SetActive(hadOneGame);
       scoreText.text = $"{GameState.Instance.airStolen} kg Oxygen stolen";
+      roomNameText.text = $"Room: {Coherence.Samples.RoomsDialog.RoomsDialogUI.currentRoomName}";
       CheckPlayers();
     }
 

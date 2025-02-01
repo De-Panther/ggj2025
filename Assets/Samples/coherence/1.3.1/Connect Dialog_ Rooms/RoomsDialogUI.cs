@@ -16,6 +16,29 @@ namespace Coherence.Samples.RoomsDialog
 {
     public class RoomsDialogUI : MonoBehaviour
     {
+        public static string currentRoomName = string.Empty;
+        private string[] animals = new string[] {
+            "Aardvark",
+            "Badger",
+            "Bear",
+            "Canidae",
+            "Cheetah",
+            "Felidae",
+            "Fox",
+            "Hyena",
+            "Jaguar",
+            "Leopard",
+            "Lion",
+            "Mink",
+            "Panda",
+            "Panther",
+            "Procyonidae",
+            "Raccoon",
+            "Shark",
+            "Tiger",
+            "Viverridae",
+            "Wolf"};
+
         #region References
         [Header("References")]
         public GameObject connectDialog;
@@ -185,6 +208,7 @@ namespace Coherence.Samples.RoomsDialog
             var options = RoomCreationOptions.Default;
             options.KeyValues.Add(RoomData.RoomNameKey, roomNameInputField.text);
             options.MaxClients = UserRoomLimit;
+            currentRoomName = roomNameInputField.text;
 
             selectedRoomService?.CreateRoom(OnRoomCreated, options);
             HideCreateRoomPanel();
@@ -193,6 +217,7 @@ namespace Coherence.Samples.RoomsDialog
         private void JoinRoom(RoomData roomData)
         {
             ShowLoadingState();
+            currentRoomName = roomData.RoomName;
             bridge.JoinRoom(roomData);
         }
 
@@ -388,6 +413,9 @@ namespace Coherence.Samples.RoomsDialog
         }
         private void ShowCreateRoomPanel()
         {
+            roomNameInputField.interactable = false;
+            roomNameInputField.text = animals[UnityEngine.Random.Range(0, animals.Length)] +
+                UnityEngine.Random.Range(2000, 8000).ToString();
             createRoomPanel.SetActive(true);
         }
 
