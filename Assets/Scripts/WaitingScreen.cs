@@ -23,6 +23,7 @@ namespace GGJGame
     {
       hadOneGame = false;
       screen.SetActive(false);
+      inGameScoreText.text = $"O stolen: 000 / {GameState.minAirAlienNeeds}\nTime: 00";
       GameState.OnGameEnd += HandleOnGameEnd;
       GameState.OnGameStart += HandleOnGameStart;
       ClientInstantiator.OnInstanceCreated += HandleOnInstanceCreated;
@@ -50,13 +51,13 @@ namespace GGJGame
         return;
       }
       nextUpdate = Time.realtimeSinceStartup + 1;
-      inGameScoreText.text = $"O stolen:\n{GameState.Instance.airStolen} / {GameState.minAirAlienNeeds}";
+      inGameScoreText.text = $"O stolen: {GameState.Instance.airStolen:000} / {GameState.minAirAlienNeeds}\nTime: {GameState.Instance.remainingTime:00}";
     }
 
     private void HandleOnGameEnd()
     {
       CheckState();
-      inGameScoreText.text = $"O stolen:\n{GameState.Instance.airStolen} / {GameState.minAirAlienNeeds}";
+      inGameScoreText.text = $"O stolen: {GameState.Instance.airStolen:000} / {GameState.minAirAlienNeeds}\nTime: {GameState.Instance.remainingTime:00}";
     }
 
     private void HandleOnGameStart()
